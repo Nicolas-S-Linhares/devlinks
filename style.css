@@ -1,29 +1,32 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  /*
-  background-image: url(./img/bg-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  */
+:root {
+  --text-color: white;
+  --bg-url: url(./img/bg-mobile.jpg);
+}
 
-  /*background: color image repeat position/size*/
-  background: url(./img/Frame\ 2\(1\).png) no-repeat top center/cover;
+.light {
+  --text-color: black;
+  --bg-url: url(./img/bg-mobile-light(2).jpg);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
 }
 
 body * {
-  font-family: 'Inter', sans-serif;
-  color: white;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
 }
 
-#container{
+#container {
   width: 360px;
   margin: 56px auto 0px;
+  padding: 0 24px;
 }
 
 #profile {
@@ -31,7 +34,7 @@ body * {
   padding: 24px;
 }
 
-#profile img{
+#profile img {
   width: 112px;
 }
 
@@ -48,15 +51,18 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  padding: 24px 0;
 }
 
 ul li a {
   display: flex;
+  align-items: center;
   justify-content: center;
-  
+
   padding: 16px 24px;
 
-  background: rgba(255 , 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 8px;
 
@@ -64,4 +70,43 @@ ul li a {
   -webkit-backdrop-filter: blur(4px);
 
   text-decoration: none;
+  font-weight: bold;
+
+  transition: background 0.2s;
+}
+
+/* pseudo-selector*/
+ul li a:hover {
+  background: rgba(75, 34, 109, 0.103);
+  border: 1.5px solid var(--text-color);
+}
+
+/* social links */
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
 }
