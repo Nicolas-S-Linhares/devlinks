@@ -1,3 +1,8 @@
+#container {
+  height: 100vh; /* Define a altura do container para ocupar a altura total da janela de visualização */
+  overflow-y: scroll; /* Adiciona uma barra de rolagem vertical quando o conteúdo exceder a altura do container */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -195,4 +200,26 @@ footer {
   to {
     left: 0;
   }
+}
+
+/* começando */
+
+#projects-items img {
+  height: auto;
+  max-width: 100%;
+  padding: 10px;
+}
+#projects-items img:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+#projects-items p {
+  text-align: center;
+  padding: 4px;
+}
+
+#projects-items h3 {
+  text-align: center;
+  padding: 14px;
 }
